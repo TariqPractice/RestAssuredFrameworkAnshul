@@ -18,7 +18,8 @@ public class RestFWLogger {//FW - FrameWork
 	public static void endTestCase() {
 		log.info("***************************** E---N---D ***************************");
 		log.info("********************************************************************");
-		log.info("********************************************************************");
+		log.info("");
+		log.info("");
 	}
 	
 	//Need to create these methods, so that they can be called
