@@ -21,6 +21,14 @@ public class BaseClass {
 		Response response = requestSpecification.post(requestURI);
 		return response;
 	}
+	
+	public static Response postRequest(String requestURI, String requestPayload, String bearer_token) {
+		RequestSpecification requestSpecification = RestAssured.given().body(requestPayload);
+		requestSpecification.contentType(ContentType.JSON);
+		requestSpecification.header("Authorization", "Bearer "+bearer_token);
+		Response response = requestSpecification.post(requestURI);
+		return response;
+	}
 
 	public static Response putRequest(String requestURI, String requestPayload) {
 		RequestSpecification requestSpecification = RestAssured.given().body(requestPayload);
